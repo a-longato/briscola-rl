@@ -1,4 +1,8 @@
 learning_curves.txt
+checkpoints_idqn/
+checkpoints_iql/
+checkpoints_selfplay/
+psro_checkpoints/
 
 
 # Byte-compiled / optimized / DLL files
