@@ -3,6 +3,7 @@ checkpoints_idqn/
 checkpoints_iql/
 checkpoints_selfplay/
 psro_checkpoints/
+checkpoints_psro/
 
 
 # Byte-compiled / optimized / DLL files
