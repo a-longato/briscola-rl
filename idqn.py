@@ -136,14 +136,14 @@ def train_deep_idqn():
                 loss_0 = agents[0].loss if agents[0].loss is not None else 0.0
                 print(f"Episode {episode + 1}/{num_episodes} | NN Loss: {loss_0:.4f}")
                 print(f"\nWR against Random Opponent: {wr_total_rand:.1f}% (P0: {wr_p0_rand:.1f}%, P1: {wr_p1_rand:.1f}%)")
-                print(f"\nWR against Heuristic Opponent: {wr_total_heur:.1f}% (P0: {wr_p0_heur:.1f}%, P1: {wr_p1_heur:.1f}%)")
+                print(f"WR against Heuristic Opponent: {wr_total_heur:.1f}% (P0: {wr_p0_heur:.1f}%, P1: {wr_p1_heur:.1f}%)")
                 plot_learning_curve(eval_rewards_p0_rand, eval_rewards_p1_rand, eval_interval, checkpoint_dir, filename="learning_curve_rand.png")
                 plot_learning_curve(eval_rewards_p0_heur, eval_rewards_p1_heur, eval_interval, checkpoint_dir, filename="learning_curve_heur.png")
                 save_checkpoint(agents, episode + 1, checkpoint_dir)
 
         print("\nTraining complete")
-        print(f"\nLearning Curve Win Rate against Random Opponent: {eval_rewards_rand}")
-        print(f"\nLearning Curve Win Rate against Heuristic Opponent: {eval_rewards_heur}")
+        print(f"Learning Curve Win Rate against Random Opponent: {eval_rewards_rand}")
+        print(f"Learning Curve Win Rate against Heuristic Opponent: {eval_rewards_heur}")
 
     play_and_render_game(env, agents)
 
@@ -237,14 +237,14 @@ def train_deep_self_play():
                 loss_0 = agents[0].loss if agents[0].loss is not None else 0.0
                 print(f"Episode {episode + 1}/{num_episodes} | NN Loss: {loss_0:.4f}")
                 print(f"\nWR against Random Opponent: {wr_total_rand:.1f}% (P0: {wr_p0_rand:.1f}%, P1: {wr_p1_rand:.1f}%)")
-                print(f"\nWR against Heuristic Opponent: {wr_total_heur:.1f}% (P0: {wr_p0_heur:.1f}%, P1: {wr_p1_heur:.1f}%)")
+                print(f"WR against Heuristic Opponent: {wr_total_heur:.1f}% (P0: {wr_p0_heur:.1f}%, P1: {wr_p1_heur:.1f}%)")
                 plot_learning_curve(eval_rewards_p0_rand, eval_rewards_p1_rand, eval_interval, checkpoint_dir, filename="learning_curve_rand.png")
                 plot_learning_curve(eval_rewards_p0_heur, eval_rewards_p1_heur, eval_interval, checkpoint_dir, filename="learning_curve_heur.png")
                 save_checkpoint(agents, episode + 1, checkpoint_dir)
 
         print("\nTraining complete")
-        print(f"\nLearning Curve Win Rate against Random Opponent: {eval_rewards_rand}")
-        print(f"\nLearning Curve Win Rate against Heuristic Opponent: {eval_rewards_heur}")
+        print(f"Learning Curve Win Rate against Random Opponent: {eval_rewards_rand}")
+        print(f"Learning Curve Win Rate against Heuristic Opponent: {eval_rewards_heur}")
 
     play_and_render_game(env, agents)
 

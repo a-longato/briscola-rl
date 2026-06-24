@@ -148,21 +148,30 @@ class BriscolaState(pyspiel.State):
 
         return [self.points[0] - 60.0, self.points[1] - 60.0]
 
-    def information_state_string(self, player):
+    def information_state_string(self, player=None):
         """string for q-learning"""
+        if player is None:
+            player = self.current_player()
+            
         if self.is_chance_node():
             return "ChanceNode"
+        if player < 0:
+            return "TerminalNode"
 
         hand_str = ",".join(map(str, sorted(self.hands[player])))
-
         briscola = self.briscola_card // 10 if self.briscola_card != -1 else -1
-
         t_card = self.table_card
 
         return f"P{player} | Hand:{hand_str} | Briscola:{briscola} | Table:{t_card}"
 
-    def information_state_tensor(self, player):
+    def information_state_tensor(self, player=None):
         """encodes game state into a 129 element numpy array"""
+        if player is None:
+            player = self.current_player()
+            
+        if player < 0:
+            player = 0 
+
         tensor = []
 
         # hand

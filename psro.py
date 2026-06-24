@@ -136,7 +136,7 @@ def train_psro():
         eval_rewards_p1_heur = []
 
         for iteration in range(start_iteration + 1, psro_iterations + 1):
-            print(f" PSRO Iteration {iteration}")
+            print(f"PSRO Iteration {iteration}")
 
             solver.iteration()
 
@@ -154,7 +154,7 @@ def train_psro():
             eval_rewards_p1_heur.append(wr_p1_heur)
 
             print(f"\nWR against Random Opponent: {wr_total_rand:.1f}% (P0: {wr_p0_rand:.1f}%, P1: {wr_p1_rand:.1f}%)")
-            print(f"\nWR against Heuristic Opponent: {wr_total_heur:.1f}% (P0: {wr_p0_heur:.1f}%, P1: {wr_p1_heur:.1f}%)")
+            print(f"WR against Heuristic Opponent: {wr_total_heur:.1f}% (P0: {wr_p0_heur:.1f}%, P1: {wr_p1_heur:.1f}%)")
             
             meta_game_matrix = solver.get_meta_game()
             meta_strategies = solver.get_meta_strategies()
