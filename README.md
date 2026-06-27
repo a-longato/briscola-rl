@@ -5,7 +5,7 @@ This is the repository for the coding project for the course of Reinforcement Le
 The objective of the project is to train and compare different agents learning to play Briscola. The trained agents are then pitted against each other in a round robin tournament. For more information about the algorithmns and the results, refer to `presentation.pdf`.
 
 *   **`iql.py`, `idqn.py`, `psro.py`**: These files contain the training scripts for the agents.
-*   **`tournament.py`**: This file contains the script fot the tournament.
+*   **`tournament.py`**: This file contains the script for the tournament.
 
 ## How to Run
 First, clone this repository.
